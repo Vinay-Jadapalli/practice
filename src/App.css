@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #404040;
+  --secondary-color: #4d4dff;
+  --danger-color: #b33636;
+  --font: "-apple-system, BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  margin: 0;
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--primary-color);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: 0.2s;
+}
+  :hover {
+    color: var(--secondary-color);
   }
+
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
+button {
+  font-family: var(--font);
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 0;
+}
+
+input {
+  font-family: var(--font);
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #eee;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+  h1 {
+    margin: 0;
+    font-size: 26px;
+  }
+
+
+.content {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.primary-btn {
+  height: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form-group {
+
+    margin-top: 20px;
+}
+    .actions {
+      margin-top: 30px;
+    }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.75;
   }
-  to {
-    transform: rotate(360deg);
+  input {
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+ .actions {
+    display: flex;
+    justify-content: flex-end;
+ }
+    .button {
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+      font-weight: 600;
+      color: #fff;
+      margin-left: 10px;
+    }
+    .primary-btn {
+      background-color: var(--secondary-color);
+    }
+    .cancel-btn {
+      background-color: var(--danger-color);
+    }
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column-reverse;
+    > .primary-btn {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 15px;
+    }
   }
 }
